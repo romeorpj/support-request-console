@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SideNav from "./components/SideNav.js"
-import ActionHeader from "./ActionHeader.js";
+import KpiButtons from "./components/KpiButtons.js";
+import ActionHeader from "./TopNav.js";
 
 function App() {
 	return (
@@ -8,7 +9,7 @@ function App() {
 			<SideNav />
 			<div className="dashboard-content">
 				<ActionHeader/>
-				<aside className="kpi-buttons"></aside>
+				<KpiButtons/>
 				<section className="ticket-table"></section>
 			</div>
 		</main>

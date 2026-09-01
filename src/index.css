@@ -81,16 +81,16 @@ select {
 	}
 }
 /* ########## END GLOBAL ########## */
+/* ##### SIDE NAV */
+.side-nav {
+	background: #071d3f;
+}
 
+/* ##### TOP NAV */
 .dashboard {
 	display: grid;
 	grid-template-columns: 260px minmax(0, 1fr);
 	min-height: 100vh;
-}
-
-.side-nav {
-	background: #071d3f;
-  border: solid red 4px;
 }
 
 .dashboard-content {
@@ -104,14 +104,52 @@ select {
 	min-height: 76px;
 	background: white;
 	border-bottom: 1px solid #e5e7eb;
-	border: solid orange 4px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	/* border: solid orange 4px; */
 }
-
+.top-header h1 {
+	font-size: 3rem;
+}
+.search-wrapper {
+	position: relative;
+	width: 42%;
+	display: flex;
+}
+.top-header #searchbar {
+	font-size: 2rem;
+	border: 2px solid #b3b0b0;
+	border-radius: 9px;
+	width: 100%;
+	max-width: 800px;
+	padding-left: 60px;
+	height: 50px;
+}
+.magnify-glass {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 16px;
+}
 .kpi-buttons {
 	display: grid;
 	grid-template-columns: repeat(5, minmax(160px, 1fr));
 	gap: 16px;
 	padding: 20px 32px;
+	background-color: pink;
+	outline: 2px solid red;
+	min-height: 140px;
+}
+.kpi-buttons > button {
+	min-height: 130px;
+	padding: 20px;
+	background: white;
+	border: 1px solid #e5e7eb;
+	border-radius: 12px;
+	text-align: left;
 }
 
 .ticket-table {
@@ -122,10 +160,29 @@ select {
 	border: 1px solid #e5e7eb;
 	border-radius: 12px;
 }
+/* ##### HEADER ACTIONS */
+.header-actions {
+	display: flex;
+	width: 100%;
+	max-width: 300px;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+}
+.header-actions .notification-bell {
+	width: 30px;
+	height: 30px;
+}
+.header-actions button{
+  width: 200px;
+  padding: 1.2rem 2rem;
+  border-radius: 10px;
+  background: rgb(21, 86, 251);
+  color: #f8fafc;
+  font-size:1.5rem;
+}
 
-
-
-
+/* ##### MEDIA QUERIES */
 @media (max-width: 1200px) {
 	.kpi-buttons {
 		grid-template-columns: repeat(3, minmax(180px, 1fr));
